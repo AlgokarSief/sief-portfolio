@@ -990,7 +990,7 @@ body {
 
 .project-card {
     flex: 1 1 260px;
-    max-width: 420px;
+    max-width: 1000px;
     padding: 15px;
     border: 1px solid #35335a;
     border-radius: 15px;
@@ -1043,4 +1043,38 @@ body {
 
 .theme-toggle:hover {
     color: var(--heading-color);
+}
+
+.project-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.project-images img {
+    margin-bottom: 0;
+}
+
+/* Wide screens: keep the header aligned with the sections and scale everything up */
+@media (min-width: 1440px) {
+    :root {
+        --section-width: 1320px;
+    }
+
+    .header .container {
+        max-width: var(--section-width);
+    }
+}
+
+@media (min-width: 1900px) {
+    body {
+        zoom: 1.3;
+    }
+}
+
+@media (min-width: 2400px) {
+    body {
+        zoom: 1.6;
+    }
 }
