@@ -3,19 +3,61 @@
     "text": "Hello, I'm Sief, a passionate developer and gamer. Welcome to my portfolio where I showcase my skills and projects in gaming, programming, and editing. Feel free to explore and connect with me!"
   },
   "hobbies": [
-    { "icon": "fa-solid fa-gamepad", "title": "Gaming" },
-    { "icon": "fa-solid fa-code", "title": "Programming" },
-    { "icon": "fa-solid fa-clapperboard", "title": "Editing" }
+    {
+      "icon": "fa-solid fa-gamepad",
+      "title": "Gaming"
+    },
+    {
+      "icon": "fa-solid fa-code",
+      "title": "Programming"
+    },
+    {
+      "icon": "fa-solid fa-clapperboard",
+      "title": "Editing"
+    }
   ],
   "skills": [
-    { "icon": "fa-solid fa-code", "title": "Web Development", "description": "HTML & CSS" },
-    { "icon": "fa-solid fa-video", "title": "Video Editing", "description": "Video Production" },
-    { "icon": "fa-solid fa-palette", "title": "Graphic Design", "description": "Visual Design" },
-    { "icon": "fa-solid fa-gamepad", "title": "Gaming", "description": "Gaming Experience" },
-    { "icon": "fa-solid fa-file-excel", "title": "Microsoft Excel", "description": "VLOOKUP & Pivot Tables" },
-    { "icon": "fa-solid fa-briefcase", "title": "Microsoft Office", "description": "Word, Excel & PowerPoint" }
+    {
+      "icon": "fa-solid fa-code",
+      "title": "Web Development",
+      "description": "HTML & CSS"
+    },
+    {
+      "icon": "fa-solid fa-video",
+      "title": "Video Editing",
+      "description": "Video Production"
+    },
+    {
+      "icon": "fa-solid fa-palette",
+      "title": "Graphic Design",
+      "description": "Visual Design"
+    },
+    {
+      "icon": "fa-solid fa-gamepad",
+      "title": "Gaming",
+      "description": "Gaming Experience"
+    },
+    {
+      "icon": "fa-solid fa-file-excel",
+      "title": "Microsoft Excel",
+      "description": "VLOOKUP & Pivot Tables"
+    },
+    {
+      "icon": "fa-solid fa-briefcase",
+      "title": "Microsoft Office",
+      "description": "Word, Excel & PowerPoint"
+    }
   ],
-  "projects": [],
+  "projects": [
+    {
+      "title": "Kumara RGB Studio",
+      "description": "A desktop app I built to control the lighting of Redragon keyboards. It shows a live keyboard preview, 11 lighting effects (like Neon Stream, Sine Wave and Retro Snake), 5 speed levels and 5 brightness levels. Version 1.3.",
+      "images": [
+        "img/kumara-dashboard.jpg",
+        "img/kumara-lighting.jpg"
+      ]
+    }
+  ],
   "contact": {
     "text": "Want to work together or just say hi? Reach out.",
     "email": "siefallahmostafa@gmail.com",
