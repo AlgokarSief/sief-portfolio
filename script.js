@@ -41,14 +41,18 @@
             card.appendChild(el('h3', '', p.title || ''));
             if (p.description) card.appendChild(el('p', '', p.description));
             var pics = Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []);
-            pics.forEach(function (src) {
-                if (!src) return;
-                var img = el('img');
-                img.src = src;
-                img.alt = p.title || 'Project';
-                img.loading = 'lazy';
-                card.appendChild(img);
-            });
+            if (pics.length) {
+                var gallery = el('div', 'project-images');
+                pics.forEach(function (src) {
+                    if (!src) return;
+                    var img = el('img');
+                    img.src = src;
+                    img.alt = p.title || 'Project';
+                    img.loading = 'lazy';
+                    gallery.appendChild(img);
+                });
+                card.appendChild(gallery);
+            }
             if (p.link) {
                 var a = el('a', '', 'View project');
                 a.href = safeUrl(p.link);
