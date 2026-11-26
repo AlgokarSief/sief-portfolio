@@ -1,0 +1,78 @@
+media:
+  input: img
+  output: img
+content:
+  - name: site
+    label: Portfolio content
+    type: file
+    path: content.json
+    format: json
+    fields:
+      - name: about
+        label: About Me
+        type: object
+        fields:
+          - name: text
+            label: Text
+            type: text
+      - name: hobbies
+        label: Hobbies
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon class (Font Awesome, e.g. fa-solid fa-gamepad)
+            type: string
+          - name: title
+            label: Title
+            type: string
+      - name: skills
+        label: Skills
+        type: object
+        list: true
+        fields:
+          - name: icon
+            label: Icon class (Font Awesome, e.g. fa-solid fa-code)
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: string
+      - name: projects
+        label: Projects
+        type: object
+        list: true
+        fields:
+          - name: title
+            label: Title
+            type: string
+          - name: description
+            label: Description
+            type: text
+          - name: image
+            label: Image
+            type: image
+          - name: link
+            label: Link (https://...)
+            type: string
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - name: text
+            label: Intro text
+            type: string
+          - name: email
+            label: Email
+            type: string
+          - name: facebook
+            label: Facebook URL
+            type: string
+          - name: github
+            label: GitHub URL
+            type: string
+          - name: youtube
+            label: YouTube URL
+            type: string
