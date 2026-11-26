@@ -38,15 +38,17 @@
         var frag = document.createDocumentFragment();
         items.forEach(function (p) {
             var card = el('div', 'project-card');
-            if (p.image) {
+            card.appendChild(el('h3', '', p.title || ''));
+            if (p.description) card.appendChild(el('p', '', p.description));
+            var pics = Array.isArray(p.images) ? p.images : (p.image ? [p.image] : []);
+            pics.forEach(function (src) {
+                if (!src) return;
                 var img = el('img');
-                img.src = p.image;
+                img.src = src;
                 img.alt = p.title || 'Project';
                 img.loading = 'lazy';
                 card.appendChild(img);
-            }
-            card.appendChild(el('h3', '', p.title || ''));
-            if (p.description) card.appendChild(el('p', '', p.description));
+            });
             if (p.link) {
                 var a = el('a', '', 'View project');
                 a.href = safeUrl(p.link);
@@ -85,4 +87,30 @@
             setContact(d.contact);
         })
         .catch(function () { /* keep the static content */ });
+
+    /* Dark / light toggle. Default follows the device; a click saves the choice. */
+    var lightCss = document.getElementById('light-css');
+    if (lightCss) {
+        var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'theme-toggle';
+        document.body.appendChild(btn);
+        var isLight = function () {
+            if (lightCss.media === 'all') return true;
+            if (lightCss.media === 'not all') return false;
+            return window.matchMedia('(prefers-color-scheme: light)').matches;
+        };
+        var refresh = function () {
+            var light = isLight();
+            btn.replaceChildren(icon(light ? 'fa-solid fa-moon' : 'fa-solid fa-sun'));
+            btn.setAttribute('aria-label', light ? 'Switch to dark theme' : 'Switch to light theme');
+        };
+        btn.addEventListener('click', function () {
+            var next = isLight() ? 'dark' : 'light';
+            lightCss.media = next === 'light' ? 'all' : 'not all';
+            try { localStorage.setItem('theme', next); } catch (e) { }
+            refresh();
+        });
+        refresh();
+    }
 })();
