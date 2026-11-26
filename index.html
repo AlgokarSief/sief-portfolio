@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Style -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="light.css" media="(prefers-color-scheme: light)" id="light-css">
+    <script>
+        /* Apply the saved theme choice before the page paints */
+        (function () {
+            try {
+                var t = localStorage.getItem("theme");
+                var l = document.getElementById("light-css");
+                if (t === "light") l.media = "all";
+                else if (t === "dark") l.media = "not all";
+            } catch (e) { }
+        })();
+    </script>
     <!-- Style -->
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
