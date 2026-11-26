@@ -51,9 +51,10 @@ content:
           - name: description
             label: Description
             type: text
-          - name: image
-            label: Image
+          - name: images
+            label: Images
             type: image
+            list: true
           - name: link
             label: Link (https://...)
             type: string
