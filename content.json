@@ -51,7 +51,7 @@
   "projects": [
     {
       "title": "Kumara RGB Studio",
-      "description": "A desktop app I built to control the lighting of Redragon keyboards. It shows a live keyboard preview, 11 lighting effects (like Neon Stream, Sine Wave and Retro Snake), 5 speed levels and 5 brightness levels. Version 1.3.",
+      "description": "A desktop app I built to control the lighting of Redragon keyboards. It shows a color-coded live keyboard preview, 11 lighting effects (like Neon Stream, Sine Wave and Retro Snake), 5 speed levels and 5 brightness levels. Version 1.3.",
       "images": [
         "img/kumara-dashboard.jpg",
         "img/kumara-lighting.jpg"
